@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Hasher</string>
+    <string name="hash_generator">Hash Generator</string>
+    <string name="edit_text_hint">Type your text...</string>
+    <string name="generate">Generate</string>
+    <string name="sha_256">SHA-256</string>
+    
+    <string-array name="hash_algorithms">
+        <item>SHA-256</item>
+        <item>SHA-512</item>
+        <item>MD5</item>
+    </string-array>
+</resources>
