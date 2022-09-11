@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/secondary_color"
-    tools:context=".ui.MainFragment">
+    tools:context=".ui.home.HomeFragment">
 
     <TextView
         android:id="@+id/textView"
@@ -80,14 +81,15 @@
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="0dp"
-        android:layout_height="154dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:background="@color/primary_color"
         android:ems="10"
         android:gravity="top|start"
         android:hint="@string/edit_text_hint"
-        android:inputType="textPersonName"
-        android:maxLines="6"
+        android:inputType="textPersonName|textMultiLine"
+        android:lines="7"
+        android:maxLines="7"
         android:padding="16sp"
         android:textColor="@color/white"
         android:textColorHint="@color/grey"
@@ -97,9 +99,9 @@
         app:layout_constraintTop_toBottomOf="@+id/algorithmTextInputLayout" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/generateButton"
         android:layout_width="0dp"
-        android:layout_height="56dp"
+        android:layout_height="62dp"
         android:backgroundTint="@color/teal"
         android:letterSpacing="0"
         android:text="@string/generate"
@@ -110,15 +112,17 @@
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:layout_constraintVertical_bias="0.258" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
@@ -126,5 +130,28 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.38" />
+
+    <View
+        android:id="@+id/successBackground"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:alpha="0"
+        android:background="@color/teal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/successAnimationView"
+        android:layout_width="198dp"
+        android:layout_height="198dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/success" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

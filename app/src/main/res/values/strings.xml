@@ -4,10 +4,17 @@
     <string name="edit_text_hint">Type your text...</string>
     <string name="generate">Generate</string>
     <string name="sha_256">SHA-256</string>
-    
+    <string name="ok">Ok</string>
+    <string name="empty_field_error">Field is empty!</string>
+    <string name="clipboard_label">Encrypted text</string>
+    <string name="copied">Copied!</string>
+    <string name="copy">Copy to clipboard</string>
+
     <string-array name="hash_algorithms">
         <item>SHA-256</item>
         <item>SHA-512</item>
         <item>MD5</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
